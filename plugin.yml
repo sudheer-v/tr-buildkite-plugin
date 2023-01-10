@@ -1,0 +1,31 @@
+name: Trivy
+description: Trivy Security Scanning
+author: Equinix Metal
+requirements:
+  - bash
+  - docker
+  - uname
+  - curl
+  - mktemp
+  - tar
+configuration:
+  properties:
+    exit-code:
+      type: integer
+    severity:
+      type: string
+    ignore-unfixed:
+      type: boolean
+    trivy-version:      
+      type: string
+    security-checks:
+      type: string
+    image-ref:
+      type: string
+    skip-files:
+      type: string
+    skip-dirs:
+      type: string
+    helm-overrides-file:
+      type: string
+  additionalProperties: false
